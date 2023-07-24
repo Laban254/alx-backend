@@ -28,14 +28,13 @@ class Server:
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """returns a dataset for a given datarange"""
 
-        try:
-            assert page > 0 or page_size > 0
-            assert type(page) is int or type(page_size) is int
-            pages = index_range(page, page_size)
-            dataset = self.dataset()[pages[0]:pages[1]]
-            return dataset
-        except Exception:
+        assert type(page) == int and type(page_size) == int
+        assert page > 0 and page_size > 0
+        start, end = index_range(page, page_size)
+        data = self.dataset()
+        if start > len(data):
             return []
+        return data[start:end]
 
 
 def index_range(page, page_size) -> tuple:
