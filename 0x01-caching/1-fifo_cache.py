@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """  FIFO caching """
+from typing import Any
 from base_caching import BaseCaching
 
 
@@ -11,7 +12,7 @@ class FIFOCache(BaseCaching):
         super().__init__()
         self.queue = []
 
-    def put(self, key, item):
+    def put(self, key: Any, item: Any) -> None:
         """add an item in the cache"""
 
         if key is None and item is None:
