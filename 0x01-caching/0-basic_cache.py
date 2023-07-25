@@ -4,18 +4,18 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-    def __init__(self):
-        super().__init__()
+    """defines basic caching"""
 
     def put(self, key, item):
-        """add item to cache"""
-
-        if key is not None and item is not None:
+        """assigns key and item to the dict"""
+        if key is None and item is None:
+            pass
+        else:
             self.cache_data[key] = item
 
     def get(self, key):
-        """returns the key"""
-
-        if key is not None and key in self.cache_data:
-            return self.cache_data.get(key)
-        return None
+        """retrives the value of the key from the dict"""
+        if key is None or self.cache_data.get(key) is None:
+            return None
+        else:
+            return self.cache_data[key]
