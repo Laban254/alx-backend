@@ -39,7 +39,7 @@ def index():
     Returns:
         str: Rendered HTML content.
     """
-    return render_template("1-index.html")
+    return render_template("2-index.html")
 
 
 @babel.localeselector
