@@ -2,7 +2,8 @@
 
 `Back-end`
 
-![meme](./images/meme.jpeg)
+![i18n](https://github.com/Laban254/alx-backend/assets/64686919/a4e5d9bd-1c9a-44d2-8567-ba8c36e3e424)
+
 
 ## Resources
 
