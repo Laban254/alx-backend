@@ -13,9 +13,10 @@ class Config(object):
     Returns:
                     _type_: _description_
     """
-    LANGUAGES = ['en', 'fr']
-    BABEL_DEFAULT_LOCALE = 'en'
-    BABEL_DEFAULT_TIMEZONE = 'UTC'
+
+    LANGUAGES = ["en", "fr"]
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
 # configure the flask app
@@ -34,9 +35,8 @@ users = {
 
 
 def get_user():
-    """returns a user dictionary or None if the ID cannot be found
-    """
-    login_id = request.args.get('login_as')
+    """returns a user dictionary or None if the ID cannot be found"""
+    login_id = request.args.get("login_as")
     if login_id:
         return users.get(int(login_id))
     return None
@@ -44,8 +44,7 @@ def get_user():
 
 @app.before_request
 def before_request() -> None:
-    """_summary_
-    """
+    """_summary_"""
     user = get_user()
     g.user = user
 
@@ -57,22 +56,22 @@ def get_locale():
     Returns:
                     _type_: _description_
     """
-    locale = request.args.get('locale')
-    if locale in app.config['LANGUAGES']:
+    locale = request.args.get("locale")
+    if locale in app.config["LANGUAGES"]:
         print(locale)
         return locale
 
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return request.accept_languages.best_match(app.config["LANGUAGES"])
+
 
 # babel.init_app(app, locale_selector=get_locale)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    """_summary_
-    """
-    return render_template('5-index.html')
+    """_summary_"""
+    return render_template("5-index.html")
 
 
-if __name__ == '__main__':
-    app.run(port="5000", host="0.0.0.0", debug=True) 
+if __name__ == "__main__":
+    app.run(port="5000", host="0.0.0.0", debug=True)
