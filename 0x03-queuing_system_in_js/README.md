@@ -1,6 +1,17 @@
 # Queueing System In JavaScript
+![redis](https://github.com/Laban254/alx-backend/assets/64686919/783ef9cd-7e75-4184-9091-7a5b5c586d30)
 
 This project contains tasks for learning to create a queueing system in JavaScript.
+
+In this project I learned: 
++ How to run a Redis server
++ How to run simple operations with the Redis client
++ How to use a Redis client with Node JS for basic operations
++ How to store hash values in Redis
++ How to deal with async operations with Redis
++ How to use Kue as a queue system
++ How to build a basic Express app interacting with a Redis server
++ How to the build a basic Express app interacting with a Redis server and queue
 
 ## Tasks To Complete
 
