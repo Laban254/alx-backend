@@ -1,4 +1,5 @@
 # Queueing System In JavaScript
+![redis](https://github.com/Laban254/alx-backend/assets/64686919/783ef9cd-7e75-4184-9091-7a5b5c586d30)
 
 This project contains tasks for learning to create a queueing system in JavaScript.
 
